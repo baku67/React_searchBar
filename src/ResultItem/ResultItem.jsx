@@ -3,8 +3,7 @@ import s from './style.module.css'
 export function ResultItem(props) {
 
     return(
-        <div>
-            <p>test</p>
-        </div>
+            <h2>{props.title}</h2>
+
     )
 }

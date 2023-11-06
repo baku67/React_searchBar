@@ -9,10 +9,9 @@ function App() {
 
   const [input, setInput] = useState("")
 
-  const [results, setResults] = useState([])
+  const [results, setResults] = useState([ELEMENTS])
 
 
-  
   function search(inputValue) {
 
     const input = inputValue.toLowerCase()

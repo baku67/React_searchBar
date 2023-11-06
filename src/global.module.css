@@ -16,3 +16,13 @@ body {
     /* color: red; */
 }
 
+
+.resultsContainer {
+    display: inline-flex;
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
