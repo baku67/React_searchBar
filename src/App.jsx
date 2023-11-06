@@ -9,18 +9,16 @@ function App() {
 
   const [input, setInput] = useState("")
 
-  const [results, setResults] = useState([ELEMENTS])
+  const [results, setResults] = useState(ELEMENTS)
 
 
   function search(inputValue) {
 
-    const input = inputValue.toLowerCase()
-
     const elements = ELEMENTS.map((elem) => elem.toLowerCase())
+    const input = inputValue.toLowerCase()
 
     const results = elements.filter(elem => elem.match(input));
 
-    console.log(results)
     setResults(results)
   }
   
