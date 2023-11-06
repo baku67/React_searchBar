@@ -14,23 +14,23 @@ function App() {
   const [elemSelected, setElemSelected] = useState(false)
 
   const [elementSelected, setElementSelected] = useState(null)
+  const [elemSrcSelected, setElemSrcSelected] = useState("")
   
 
   function search(inputValue) {
-
-    const elements = ELEMENTS.map((elem) => elem.toLowerCase())
-    const input = inputValue.toLowerCase()
-
-    const results = elements.filter(elem => elem.match(input));
-
-    setResults(results)
+    const input = inputValue.toLowerCase();
+    const filteredResults = ELEMENTS.filter((element) =>
+      element.title.toLowerCase().includes(input)
+    );
+    setResults(filteredResults);
   }
 
 
-  function updateElemSelected(newState, elemTitle) {
+  function updateElemSelected(newState, elemTitle, elemSrc) {
     console.log(newState)
     setElemSelected(newState)
     setElementSelected(elemTitle)
+    setElemSrcSelected(elemSrc)
   }
 
 
@@ -41,7 +41,13 @@ function App() {
 
   if(elemSelected) {
     return (
-      <p>Fiche détaillée: {elementSelected}</p>
+      <div>
+        
+        <p>Fiche détaillée: {elementSelected}</p>
+        <img style={{width:"100%", maxWidth:"100%"}} src={elemSrcSelected} />
+
+      </div>
+      
     )
   }
   else {
