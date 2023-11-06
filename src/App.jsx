@@ -44,7 +44,12 @@ function App() {
       <div>
         
         <p>Fiche détaillée: {elementSelected}</p>
+
+        <button onClick={() => setElemSelected(false)}>Retour</button>
+
         <img style={{width:"100%", maxWidth:"100%"}} src={elemSrcSelected} />
+
+        
 
       </div>
       
