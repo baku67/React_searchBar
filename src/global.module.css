@@ -1,0 +1,18 @@
+body {
+    font-family: Maximum Impact;
+}
+
+.appContainer {
+    display: inline-flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+
+}
+
+.title {
+    /* color: red; */
+}
+
