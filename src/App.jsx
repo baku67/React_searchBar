@@ -11,6 +11,8 @@ function App() {
 
   const [results, setResults] = useState(ELEMENTS)
 
+  const [elemSelected, setElemSelected] = useState(false)
+  
 
   function search(inputValue) {
 
@@ -21,6 +23,13 @@ function App() {
 
     setResults(results)
   }
+
+
+  function updateElemSelected(newState) {
+    console.log("updateElemSelected")
+    setElemSelected(newState)
+  }
+
   
 
   return (
@@ -30,7 +39,7 @@ function App() {
 
       <SearchBar onChangeInput={search} currentInput={input} />
 
-      <SearchResults resultsArray={results} />
+      <SearchResults resultsArray={results} onItemClick={updateElemSelected} />
 
     </div>
   )
