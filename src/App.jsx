@@ -12,6 +12,7 @@ function App() {
   const [results, setResults] = useState([])
 
 
+  
   function search(inputValue) {
 
     const input = inputValue.toLowerCase()
@@ -20,11 +21,11 @@ function App() {
 
     const results = elements.filter(elem => elem.match(input));
 
-
     console.log(results)
     setResults(results)
   }
   
+
   return (
     <div className={s.appContainer}>
 
